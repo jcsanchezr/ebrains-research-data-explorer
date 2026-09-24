@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "alembic>=1.20.0",
+    "fairgraph>=0.15.0",
     "fastapi>=0.141.1",
     "httpx>=0.28.1",
     "psycopg[binary]>=3.3.6",
@@ -29,3 +30,6 @@ dev = [
     "pytest-asyncio>=1.4.0",
     "ruff>=0.16.8",
 ]
+[[tool.mypy.overrides]]
+module = ["fairgraph", "fairgraph.*"]
+ignore_missing_imports = true  
