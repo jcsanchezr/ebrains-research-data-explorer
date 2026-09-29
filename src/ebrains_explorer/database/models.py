@@ -20,7 +20,6 @@ from sqlalchemy.types import JSON
 
 from ebrains_explorer.database.base import Base
 
-
 JSON_TYPE = JSON().with_variant(JSONB, "postgresql")
 
 
