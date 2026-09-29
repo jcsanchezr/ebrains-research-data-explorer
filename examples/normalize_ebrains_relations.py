@@ -4,7 +4,6 @@ from ebrains_explorer.ingestion.ebrains import (
 )
 from ebrains_explorer.ingestion.resolver import resolve_relation
 
-
 RELATIONS = (
     "license",
     "repository",
@@ -31,10 +30,7 @@ def main() -> None:
         print(relation_name)
 
         for entity in entities:
-            print(
-                f"  {entity.entity_type:24} "
-                f"{entity.label!r}"
-            )
+            print(f"  {entity.entity_type:24} {entity.label!r}")
 
         print()
 
